@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Taller de Comercio Electrónico</title>
+
+		<meta name="description" content="Taller de Comercio Electrónico - Cómo construir tu tienda web">
+		<meta name="author" content="Santiago Neira">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h4><a>Sesion #2 - Woocommerce</a></h4>
+					<br /><br />
+					<h2 style="font-size: 220%;">Taller E-Commerce</h2>
+					<p>
+						<br /><br /><br /><br />
+						<small>Santiago Neira <a href="https://www.ticbiz.cl/">&lt;stgoneira@ticbiz.cl&gt;</a></small>
+					</p>
+				</section>
+
+				<!-- Introducción -->
+				<section>
+					<section data-markdown="">
+						## [Objetivos]()
+	
+						- [Terminar]() con un [sitio operativo o semioperativo]() (en cuanto a pagos)
+							* Comprender las [diferencias]() de un [entorno]() de [Desarrollo]() y uno de [Producción]() 
+							* [Instalar WP]() en entorno de [Producción]()
+							* [Configurar Woocommerce]()
+							* Instalar y Configurar [medios de Pagos]()
+							* Instalar y Configurar los [Envíos]()
+							* Cambiar la [apariencia]() del sitio
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						## [Sesión Anterior]()
+	
+						- Vimos los [conceptos]() principales asociados a un sitio web de comercio  electrónico
+						- Descubrimos y [comparamos]() las distintas [soluciones]() disponibles  
+						- Desarrollamos escuetamente un plan para nuestro proyecto de Ecommerce
+						- [Instalamos]() Wordpress y Woocommerce en una Ambiente de Desarrollo con XAMPP
+					</section>
+					<section>
+						<img src="img/diagrama-internet.png" style="width: 80%;">
+					</section>
+					<section data-markdown="">
+						## [Ambiente de Desarrollo ]()
+
+						- [XAMPP]() incluye:
+							* Servidor HTTP [(Apache)]()
+							* Servidor de Base de Datos [(MySQL)]()
+						- XAMPP se [instala sólo una vez]()
+						- Recuerde [subir los servicios]() cada vez que necesite trabajar sobre su sitio
+					</section>
+					<section data-markdown="">
+						## [Ambiente de Producción]()
+
+						- [CPanel]() incluye:
+							* Servidor [HTTP]() (Apache o Nginx)
+							* Servidor de [Base de Datos]() (MySQL o MariaDB)
+							* Servidor [DNS]()
+					</section>
+					<section data-markdown="">
+						## [Hasta dónde llegamos]()
+
+						1. Instalar XAMPP
+						1. Instalar Wordpress
+						1. Instalar Woocommerce
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Introducción al CPanel]()
+
+						- [Facilita]() la [administración]() de un servidor a través de clicks
+						- [Softaculous]() permite instalar software de manera fácil
+						- Otros elementos del CPanel
+							* Bases de Datos 
+							* Correos 
+							* File Manager 
+							* Otros 
+					</section>
+					<section data-markdown="">
+						# [Instalación WP Softaculous]()
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Componentes Wordpress]()
+
+						- Plugins
+						- Themes
+						- Traducciones
+					</section>
+					<section data-markdown="">
+						## [Estructura Wordpress]()
+
+						![Estructura WP](img/wp-structure.png)
+					</section>
+					<section data-markdown="">
+						## [Instalación Componentes]()
+
+						- Instalación por [click]() 
+						- Instalación subiendo componente como [.zip]()
+						- Instalación [Manual]() 
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Checkpoint]()
+
+						En este punto ud. debería tener:
+
+						- [Wordpress]() instalado ya sea en ambiente de desarrollo o producción 
+						- [Woocommerce]() instalado						
+					</section>
+					<section data-markdown="">
+						## [Dinámica de Trabajo]()
+
+						Para [mejorar]() la [fluidez]() del taller:
+						- [Relator muestra]() los [pasos]() a seguir para completar la etapa
+						- Los oyentes [realizan la actividad]() una vez [terminada]() la [demostración]()
+						- Durante la actividad se [resolverán las dudas]()
+						- Los [asistentes]() más [aventajados]() podrán [continuar agregando contenido]() a su sitio web [o ayudar]() a algún compañero con dificultades para completar la etapa 
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Gestión del Catálogo]()
+	
+						1. Crear Árbol de [Categorías]()
+						1. Crear [Productos]()
+						1. Vincular a través de uno o más [menús]()
+						1. [Demo]()stración 
+					</section>
+					<section data-markdown="">
+						## [Árbol de Categorías]() 
+
+						- Ir a la opción [Productos &rarr; Categorías]()
+						- Utilizar el [formulario]() para ir creando las categorías 
+						- Utilizar la opción [Categoría padre]() cuando sea necesario
+						- Idealmente el árbol no debiese tener más de [3 niveles](), por usabilidad 
+					</section>
+					<section data-markdown="">
+						## [Agregar Productos]()
+
+						- Es posible crear producto con y sin [variaciones]()
+						- Gestionar o no el [inventario]()
+						- Para crear productos debo ir a la sección [Productos &rarr; Añadir nuevo ]()
+						- Recuerde [seleccionar]() una o más [categorías]() para el producto 
+						- Es posible:
+							* Crear una [galería]() de imágenes
+							* Añadir [videos]() en la descripción
+							* Atachar [etiquetas]() al producto
+					</section>
+					<section data-markdown="">
+						## [Menú #1]()
+
+						- Ir a [Apariencia &rarr; Menús]()
+						- [Crear menú]() llamado mainmenu
+						- Hacerlo visible en [Menú horizontal del escritorio]()
+						- Guardar
+					</section>
+					<section data-markdown="">
+						## [Menú #2]()
+
+						- Ir a [Opciones de pantalla]()
+						- Marcar la opción [Categorías de producto]()
+						- Luego [agregar]() todos los [enlaces]() de [categorías]() de productos al menú
+						- Agregar enlace de [Inicio]() desde [Páginas &rarr; Ver todo &rarr; Inicio]()
+						- [Ordenar]() si es necesario 
+						- Guardar 
+					</section>					
+					<section data-markdown="">
+						## [Actividad 10-15 min]()
+
+						De acuerdo a su plan realice lo siguiente:
+						- [Cree]() el árbol completo de [categorías]() para su sitio
+						- Cree al menos [5 productos]()
+					</section>
+				</section>
+				
+
+				<section>
+					<section data-markdown="">
+						## [Pagos]()
+
+						- [Offline]()
+							* Cheque 
+							* Transferencia
+							* Contraentrega
+						- [Online]()
+							* Transbank 
+							* [Flow](https://www.flow.cl/woocommerce.php)
+							* [Khipu](https://khipu.com/page/woocommerce)
+							* Otros 
+					</section>
+					<section data-markdown="">
+						## [Woocommerce Transbank]()
+
+						- Plugins &rarr; [Añadir Nuevo]()
+						- Buscar [transbank]()
+						- Instalar: [Webpay Plus Webservices para Woocommerce]()
+						- Activar 
+					</section>
+					<section data-markdown="">
+						## [Woocommerce Transbank]()
+
+						- Probablemente arrojará un error: [Fatal error: Uncaugh Error: Class 'SoapClient']()
+						- Para funcionar con Transbank debemos [activar extensión SOAP]()
+							* Ir a [XAMPP Control &rarr; Apache Config &rarr; php.ini]()
+							* Modificar archivo para [activar extensión SOAP]()
+							* [Reiniciar servidor]() Apache (Stop y luego Start)
+						```ini
+						; antes 
+						;extension=soap 
+						; después 
+						extension=soap 
+						```
+					</section>
+					<section data-markdown="">
+						## [Probamos]() 
+
+						- [Por defecto]() viene configurado para poder hacer [pruebas]()
+						- Hacemos una [compra]() para probar 
+						- Los [datos]() de las [Tarjetas]() para realizar pruebas son los sgtes:
+					</section>
+					<section data-markdown="">
+						## [Transbank TC Pruebas]() 
+
+						- [VISA]() 4051885600446623, CVV 123, cualquier fecha de expiración. Esta tarjeta genera transacciones [aprobadas]().
+						- [MASTERCARD]() 5186059559590568, CVV 123, cualquier fecha de expiración. Esta tarjeta genera transacciones [rechazadas]().						
+					</section>
+					<section data-markdown="">
+						## [Transbank TD Pruebas]() 
+
+						- [Redcompra]() 4051884239937763 genera transacciones [aprobadas]() (para operaciones que permiten débito Redcompra)
+						- [Redcompra]() 5186008541233829 genera transacciones [rechazadas]() (para operaciones que permiten débito Redcompra)
+					</section>
+					<section data-markdown="">
+						## [Transbank Banca Prueba]() 
+
+						Cuando aparece un formulario de autenticación con RUT y clave, se debe usar el RUT 11.111.111-1 y la clave 123.
+					</section>
+					<section data-markdown="">
+						## [Actividad 10-15min]()
+
+						- [Instale y Active]() el plugin de Transbank
+						- Realice una compra con [pago aprobado]()
+						- Realice una compra con [pago rechazado]()
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Envíos - Alternativas]()
+
+						- Tarifa Fija
+						- Envío Gratuito 
+						- Recogida en Local 
+						- Valor envío según clases
+						- Integraciones con Chilexpress, Starken u otros
+					</section>
+					<section data-markdown="">
+						## [Plugins a Utilizar]()
+
+						- Regiones de Chile para Woocommerce
+					</section>
+					<section data-markdown="">
+						## [Configuración]()
+
+						- Vaya a [Woocommerce &rarr; Ajustes]()
+						- Pestaña Envío 
+						- Opciones de Envío 
+						- Marque [Activar el modo de depuración]() para trabajar mejor 
+					</section>
+					<section data-markdown="">
+						## [Ejemplos]()
+
+						- Cobro Fijo
+						- Cobro por Clase
+						- Cobro Fijo por Región [(orden de las reglas)]()
+						- Cobro Fijo por Región y Clase [(orden de las reglas)]()
+					</section>					
+					<section data-markdown="">
+						## [Actividad 10-15min]()
+
+						- Configure el envío de al menos 5 productos
+						- Utilice clases
+						- Configure por región
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Apariencia]() 
+
+						- Los [temas]() permiten trabajar la [apariencia del sitio]() 
+						- Existe una [gran cantidad]() de temas disponible para Wordpress 
+						- En nuestro caso debemos buscar temas [compatibles con Woocommerce]()
+					</section>
+					<section data-markdown="">
+						## [Instalación de Nuevos Temas]()
+
+						- Vaya a [Apariencia &rarr; Temas]() 
+						- [Añadir nuevo]()
+						- [Navegue o busque]() algún theme de su preferencia 
+						- Puede ver la [vista previa]() o [instalar]() directamente
+					</section>
+					<section data-markdown="">
+						## [Ejemplos]()
+
+						- Storefront 
+						- Child theme - Storefront Boutique
+						- Astra
+					</section>
+					<section data-markdown="">
+						## [Tareas Típicas]()
+
+						- Cambiar el [Logotipo]()
+						- Otras opciones (depende del theme)
+							* Colores
+							* Imágenes
+							* Tipografías
+							* Cant. Columnas
+							* Etc 
+					</section>
+					<section data-markdown="">
+						## [Actividad 15-20min]()
+
+						- [Pruebe]() distintos themes 
+						- [Escoja]() uno
+						- [Personalice]() distintos elementos como:
+							* Logotipo
+							* Colores
+							* Tipografías
+							* Columnas 
+							* Imágenes 
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Traducciones]()
+
+						- Cambio de idioma en:
+							* [Ajustes &gt; Generales &gt; Idioma del sitio]()
+						- Descargar archivos [.mo]()
+						- Colocar archivos en [wp-content/languages]()
+						- Personalización de traducciones con [plugin Loco]()
+					</section>
+					<section data-markdown="">
+						## Recursos
+
+						- Loco Plugin:
+						[https://wordpress.org/plugins/loco-translate/](https://wordpress.org/plugins/loco-translate/)
+						- Traducción Core Wordpress:
+						[https://make.wordpress.org/polyglots/teams/?locale=es_ES](https://make.wordpress.org/polyglots/teams/?locale=es_ES)
+						- Traducción Woocommerce:
+						[https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/es/default/](https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/es/default/)
+					</section>
+					
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [FAQ]()
+
+						- [¿Cómo ver detalle de errores?]()
+							* En wp-config.php activar WP_DEBUG
+						```php
+						define( 'WP_DEBUG', true );
+						```
+					</section>
+					<section data-markdown="">
+						## [FAQ]()
+
+						- [Por el contrario, si quiero ocultar los inofensivos WARNINGs]()
+						```php
+						ini_set(‘display_errors’,’Off’);
+						ini_set(‘error_reporting’, E_ALL );
+						define(‘WP_DEBUG’, false);
+						define(‘WP_DEBUG_DISPLAY’, false);
+						```
+					</section>
+					<section data-markdown="">
+						## [FAQ]()
+
+						- [Ya realice mi sitio en ambiente de desarrollo, ahora ¿cómo lo migro?]()
+							* [Respaldo]() los archivos como un [ZIP]() (carpeta de instalación de wordpress)
+							* [Respaldo]() la [Base de Datos]() desde [phpMyAdmin]()
+							* [Restauro]() los archivos en mi [servidor de producción]()
+							* [Agrego]() al archivo [wp-config.php]() lo siguiente: 
+						```php
+						define('WP_HOME','http://example.com');
+						define('WP_SITEURL','http://example.com');
+						```
+					</section>
+				</section>
+				
+				<section>
+					<section data-markdown="">
+						## [¿Qué sigue?]()
+
+						- Puesta en Producción 
+						- Instalar Actualizaciones Periódicamente
+						- Respaldos Periódicos
+						
+					</section>
+					<section data-markdown="">
+						## [¿Qué sigue?]()
+
+						- Generación de Contenido 
+						- SEO 
+						- Mediciones 
+						- Integración con Redes Sociales 
+					</section>
+					<section data-markdown="">
+						## [¿Qué sigue?]()
+
+						- Probar Nuevos Plugins 
+						- Integración con Otros Sitios, Aplicaciones, SW, etc 
+						- Aprender a Programar Extensiones						
+					</section>
+					<section data-markdown="">
+						## [¿Qué sigue?]()
+
+						- Sistemas de Fidelización 
+						- Analítica e Inteligencia sobre los Datos
+					</section>
+				</section>
+
+				<section>
+					<h1><a>Gracias por su atención</a> <br /> ;)</h1>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

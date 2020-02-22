@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Taller de Comercio Electrónico</title>
+
+		<meta name="description" content="Taller de Comercio Electrónico - Cómo construir tu tienda web">
+		<meta name="author" content="Santiago Neira">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h4><a>Sesion #1 - Introducción</a></h4>
+					<br /><br />
+					<h2 style="font-size: 220%;">Taller E-Commerce</h2>
+					<p>
+						<br /><br /><br /><br />
+						<small>Santiago Neira <a href="https://www.ticbiz.cl/">&lt;stgoneira@ticbiz.cl&gt;</a></small>
+					</p>
+				</section>
+				
+				<!-- Introducción -->
+				<section>
+					<section data-markdown="">
+						## [Sobre el Relator]() 
+
+						- Emprendedor
+						- Ing. en Informática y Magíster
+						- Consultoría y Ejecución de Proyectos desde el 2006
+						- Docencia y Relatorías desde 2017
+					</section>
+					<section data-markdown>
+						## Objetivos 
+	
+						- Comprender los [conceptos]() principales asociados a un sitio web de comercio  electrónico
+						- Descubrir y [comparar]() las distintas [soluciones]() disponibles  
+						- [Construir]() un sitio web de comercio electrónico  
+						- Conocer las temáticas que permitirán [seguir mejorando]() su sitio web de comercio electrónico 
+					</section>
+					<section data-markdown="">
+						## [Estructura del Taller]()
+
+						- [Sesión #1]() - 10 a 14hrs - 16 Enero
+							* Teoría 
+							* Planificación
+							* Ambientes
+							* Instalación Ecommerce 
+						- [Sesión #2]() - 10 a 14hrs - 22 Enero
+							* Configuración
+							* Carga Contenido
+							* Personalización 
+							* Tareas Mantención
+						- [Asesoría]() personalizada post taller 
+					</section>
+				</section>
+				
+
+				<section>
+					<section data-markdown="">
+						## [¿Qué entienden por Comercio Electrónico?]()
+					</section>
+					<section data-markdown="">
+						## [¿Cuáles son las diferencias con el canal físico tradicional?]()
+					</section>
+					<section data-markdown="">
+						## [Tipos de Comercio]()
+					
+						A grandes rasgos
+						¿Cómo clasificarían los distintos comercios?
+
+					</section>
+					<section data-markdown="">
+						## [Business-to-consumer (B2C)]()
+
+						- [Precios]() públicos
+						- [Usuario]() único
+						- Formas de [pago]() tradicionales (TC, TD, Transf u otras)
+					</section>
+					<section data-markdown="">
+						## [Business-to-business (B2B)]()
+
+						- [Precios]() privados
+						- Múltiples [usuarios]()
+						- Múltiples [roles]()
+						- Pago a [crédito]() como opción
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## Componentes Web Ecommerce
+					</section>
+					
+					<section data-background-iframe="https://www.dafiti.cl/" data-background-interactive>
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2 style="color: white;">Navegación</h2>
+							<p>Encontramos un menú principal, categorías anidadas. Un pié de página con más enlaces como Términos y condiciones, Cambios y Devoluciones, entre otros.</p>
+						</div>
+					</section>
+					<section data-background-iframe="https://www.dafiti.cl/Zapatilla-Trase-Tx-Gris-DC-862088.html" data-background-interactive>
+						<div style="position: absolute; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2 style="color: white;">Variaciones</h2>
+							<p>En este caso podemos escoger entre las distintas tallas disponibles.</p>
+						</div>
+					</section>
+					<section data-background-iframe="https://www.dafiti.cl/Zapatilla-Trase-Tx-Gris-DC-862088.html" data-background-interactive>
+						<div style="position: absolute; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2 style="color: white;">Productos Relacionados</h2>
+							<p>En estas secciones encontramos sugerencias de productos que nos puedan interesar, ya sean relacionados con el producto en visualización, complementarios, sugerencias personalizadas para el usuario u otros similares.</p>
+						</div>
+					</section>
+					<section data-background-iframe="https://secure.dafiti.cl/cart/" data-background-interactive>
+						<div style="position: absolute; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2 style="color: white;">Carrito</h2>
+							<p>Donde se agrupan los productos seleccionados para la compra con un resumen del total a pagar. Generalmente es posible y recomendable, que aquí ya pueda conocer el costo del envío.</p>
+						</div>
+					</section>
+					<section data-background-iframe="https://secure.dafiti.cl/customer/account/login/" data-background-interactive>
+						<div style="position: absolute; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2 style="color: white;">Usuarios</h2>
+							<p>Registro, Ingreso y Zona de Usuarios donde por lo general es posible ver los pedidos y revisar su estado.</p>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Tipos de Productos]()
+						
+						¿Cómo clasificarían los productos?
+					</section>
+					<section data-markdown="">
+						## [Productos Tangibles]()
+
+						- Ejemplos:
+							* Ropa
+							* Automóviles
+							* Balón de fútbol
+							* Comida
+						- En qué [preocuparse]():
+							* Tamaño 
+							* Peligrosidad (explosivo, inflamable)
+							* Delicado, perecible, etc 
+					</section>
+					<section data-markdown="">
+						## [Productos Intangibles]()
+
+						- Ejemplos:
+							* Música
+							* Libro formato digital
+							* Software
+						- En qué [preocuparse]():
+							* no sea copiable [(seguridad)]()
+							* que no se pueda descargar sin antes comprar
+							* otras
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [¿Cómo entrego el producto?]()
+
+						- Envíos
+							* Courier
+							* Transp. Externo o Interno
+						- Retiros
+							* Sucursales
+							* Convenios
+						- Desafíos
+							* Entrega mismo día 
+							* Envíos Internacionales
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Medios de Pago]() 
+
+						- Tarjetas de Crédito
+						- Tarjetas de Débito
+						- Tarjetas Prepago  
+						- Transferencias Bancarias
+						- Depósitos
+						- Efectivo 
+						- Bitcoin
+					</section>
+					<section data-markdown="">
+						## [Medios de Pago]() 
+
+						¿Cómo repercute en mi tienda web?
+						- Contexto [clientes]()
+						- Contexto [dueño]() empresa
+						- ¿Ventajas y Desventajas?
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## ¿Qué [características y funcionalidades]() creen debiese tener [como mínimo]() su tienda web antes de ser lanzada?
+					</section>
+					<section data-markdown="">
+						## [Producto Mínimo Viable]() 
+
+						- [Dominio]() propio (.cl, .com u otro)
+						- Diseño [responsivo]()
+						- Al menos un [medio de pago]()
+						- [Carrito]() de compras
+						-  ¿Algo más?
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Soluciones SW Ecommerce]()
+
+						- ¿Qué soluciones conocen uds.?
+						- Vamos a clasificarlas en 2:
+							* Software as a Service (SaaS) 
+							* Software normal 
+						
+					</section>
+					<section data-markdown="">
+						## [Software as a Service (SaaS)]()
+
+						- Shopify
+						- Wix
+						- Jumpseller
+						- Otras
+					</section>
+					<section data-markdown="">
+						## [Otras Soluciones de SW]() 
+
+						- Woocommerce
+						- Magento
+						- Prestashop
+						- Opencart
+						- Entre otras opciones
+					</section>
+					<section data-markdown="">
+						## [Comparación Funcionamiento]()
+
+						- Servidor
+						- Software (propietario)
+						- Actualizaciones 
+						- Respaldos 
+					</section>
+					<section data-markdown="">
+						## [Comparación Costes]() 
+
+						- Costos Servidor 
+						- Costos Mantención 
+						- Actualizaciones 
+						- Respaldos 
+					</section>
+					<section data-markdown="">
+						## [Otros Costes]() 
+
+						- Comisiones por medios de cobro
+							* Transbank
+							* [Flow](https://www.flow.cl/tarifas.php) 
+							* [Khipu](https://khipu.com/businesses) 
+							* [Pago Fácil](https://www.pagofacil.cl/precios/)
+							* [Mercado Pago](https://www.mercadopago.cl/ayuda/costo-recibir-pagos-dinero_1829)
+							* [PayuLatam](https://www.payulatam.com/cl/tarifas/)
+							 
+						
+					</section>
+					<section data-markdown="">
+						## [Plugins Transbank]()
+
+						- Woocommerce
+						- Prestashop 
+						- Magento 
+						- VirtueMart 
+						- Opencart 
+						- [Fuente info](https://www.transbankdevelopers.cl/plugin)
+					</section>
+					<section data-markdown="">
+						## [Variables Toma Decisión SW]() 
+
+						- Nivel de conocimiento 
+						- Tiempo disponible 
+						- Dinero disponible 
+						- Funcionalidades Esperadas						
+						- Entre otras 
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## Planificación
+						![Ecommerce Planning](img/ecommerce-planning.png)
+						
+					</section>
+					<section data-markdown="">
+						## [Planificación]()
+
+						- Los planes son nuestra [carta de navegación]() para lograr los objetivos
+						- Los planes [NO son estáticos](), continuamente se adaptan y mejoran
+						- Deben ser [flexibles]() para adaptarse a situaciones cambiantes
+					</section>
+					<section data-markdown="">
+						## [Actividad]()
+						
+						- Desarrolle la [planificación]() de manera [escueta]()
+						- Lo importante es hacer [consciente]() algunos temas
+						- Posteriormente en su [casa]() puede [continuar mejorando]() el plan
+						- Dedique como [máximo 5 min.]() por etapa
+					</section>
+					<section data-markdown="">
+						## [1. FODA]()
+
+						- [F]()ortalezas (interno)
+						- [O]()portunidades (externo)
+						- [D]()ebilidades (interno)
+						- [A]()menazas (externo)
+					</section>
+					<section data-markdown="">
+						## [1. FODA]()
+
+						- [F]()ortalezas (interno)
+							* Rapidez en la creación de soluciones tecnológicas
+							* Conocimiento del negocio de Ecommerce
+						- [O]()portunidades (externo)
+							* Creciente interés por viajar
+							* Ingreso de aerolíneas lowcost
+						- [D]()ebilidades (interno)
+							* Trabajo realizado por propios dueños,
+							* Mayor parte del tiempo en tareas operativas
+						- [A]()menazas (externo)
+							* Poco poder de negociación con proveedores
+					</section>
+					<section data-markdown="">
+						## [2. Objetivos SMART]()
+
+						- Objetivos [SMART]() o [MARTE]()
+							* [M]()edibles 
+							* [A]()lcanzables 
+							* [R]()ealistas 
+							* [T]()emporales 
+							* [E]()specíficos 
+					</section>
+					<section data-markdown="">
+						## [2. Objetivos SMART]()
+
+						- Conseguir un 1% de participación de mercado de los viajeros fuera de Chile por turimo durante el 1er año de funcionamiento. El 0.5% = 12.515 clientes al año, según estudio [Sernatur del año 2017](https://biblioteca.sernatur.cl/documentos/310.796.15S491a.2017.pdf).
+						- Conseguir al menos 3 proveedores por categoría de productos durante el 1er trimestre. Categorías: Maletas, Acc. Electrónicos, Acc. Higiene, entre otros.
+						- Explotar mercado sudamericano con envíos y cobros internacionales durante el 2do semestre de este año.
+
+					</section>
+					<section data-markdown="">
+						## [3. Selección de Inventario]()
+
+						- Seleccione los [productos]() que comercializará vía internet
+						- Cree el árbol de [categorías](). Recomendación: máx. 3 niveles por usabilidad.
+					</section>
+					<section data-markdown="" data-separator="^\n\n\n" data-separator-vertical="^\n\n">
+						## [3. Selección de Inventario]()
+
+						- Maletas & Mochilas
+							* Maletas
+							* Mochilas
+						- Accesorios
+							* Adaptadores de Enchufes
+							* Cargadores
+							* Candados
+							* Botiquín
+							* Iluminación
+
+
+
+						- Hidratación
+							* Filtros de Agua
+							* Purificador de Agua
+						- Higiene & Cuidado Personal							
+							* Toallas
+							* Secadores
+							* Planchas							
+							* Recipientes
+
+
+
+						- Ropa
+							* Sábanas
+							* Carteras secretas
+							* Cubos empaque
+					</section>
+
+					<section data-markdown="">
+						## [4. Selección de Tecnologías]()
+
+						Con lo que ud. sabe ahora ¿qué tecnologías usaría para confeccionar su ecommerce?
+					</section>
+					<section data-markdown="">
+						## [5. Opciones de Pago]()
+
+						Detalle las opciones de pago que desea incluir
+					</section>
+					<section data-markdown="">
+						## [5. Opciones de Pago]()
+
+						- Transferencia
+						- Tarjetas de Crédito Nacionales
+						- Tarjetas de Crédito Internacionales
+						- Tarjetas Prepago
+						- Efectivo en Servipag
+						- Pago contra entrega
+						- Paypal
+						- Stripe
+					</section>
+					<section data-markdown="">
+						## [6. Opciones de Envío]()
+
+						Detalle las opciones de envío que desea incorporar
+					</section>
+					<section data-markdown="">
+						## [6. Opciones de Envío]()
+
+						- Envío [Nacional]() 1-3 días (empresa externa: Chilexpress, Starken, otros)
+						- Envío [mismo día](), compras hasta las 12hrs (transporte interno, sólo comunas: Cerro Navia, Pudahuel, Quinta Normal, Lo Prado, Maipú)
+						- [Retiro]() en Sucursal
+						- DHL envío [internacional]()
+					</section>					
+				</section>
+
+				<section data-markdown="">
+					# Parte II
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Ambientes]()
+
+						- Desarrollo
+						- Producción
+					</section>
+					<section data-markdown="">
+						## [Desarrollo]()
+
+						- En este caso será mi [propio PC o Notebook]()
+						- Es donde realizaremos las [pruebas]() antes de pasarlas a PRODUCCIÓN
+						- [No]() debemos tener [temor]() de realizar cambios en este ambiente
+					</section>
+					<section data-markdown="">
+						## [XAMPP]()
+
+						- Es el Software (SW) que utilizaremos para montar el ambiente de [DESARROLLO]().
+						- Funciona en [Windows](), OS X y Linux.
+						- Su beneficio es que [instala todo]() lo necesario fácilmente
+						- Es el SW que [contiene lo necesario]():
+							* Servidor HTTP
+							* Servidor de Base de Datos
+							* Lenguaje de Programación PHP 
+					</section>
+					<section data-markdown="">
+						## [Paso 1: XAMPP]()
+
+						- Descargue XAMPP desde https://www.apachefriends.org
+						- Instale
+						- Ejecute [xampp-control.exe]()
+						- Suba los servicios de [Apache]() y [MySQL]()
+					</section>
+					<section data-markdown>
+						## [Paso 2: Base de Datos]()
+	
+						- Abra su navegador de preferencia (ej. Google Chrome)
+						- Vaya a [http://localhost/phpmyadmin]()
+						- Cree una base de datos llamada [wordpress]()
+					</section>
+					<section data-markdown="">
+						## [Paso 3: Wordpress]()
+
+						- Descargue Wordpress desde https://es.wordpress.org/
+						- Descomprima
+						- [Renombre]() la carpeta a [wp]()
+						- Coloque la carpeta en [c:/xampp/htdocs]()
+						- Vaya al navegador a la url [http://localhost/wp]() y siga los pasos del instalador:
+							* Usuario de Base Datos: [root]()
+							* [Password en blanco]() (borre todo lo que sale en ese campo)
+					</section>
+					<section data-markdown>
+						## [Paso 4: Woocommerce]()
+	
+						- Vaya al administrador de Wordpress [http://localhost/wp/wp-admin]()
+						- Ingrese en la sección plugins del menú y pinche [Agregar Nuevo]()
+						- Busque [woocommerce]()
+						- Pinche sobre el plugin correspondiente la opción [instalar]() y posteriormente [activar]()
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						## [Wordpress]()
+
+						- Comenzó como un SW de [Blogging]()
+						- Actualmente es un [CMS]()
+						- Puede extender su funcionalidad a través de [Plugins]()
+						- Cambiar su apariencia a través de [Themes]()
+						- Y soportar varios idiomas a través de [Traducciones]()
+					</section>
+					<section data-markdown>
+						## [Plugin Woocommerce]()
+
+						- Extiende a WP para que funcione como una [plataforma de comercio electrónico]() 
+						- Principales funcionalidades:
+							* Gestión de [Catálogo]()
+							* [Carrito]() de Compras
+							* Gestión de [Pagos Offline]()
+					</section>
+					<section data-markdown>
+						## [Actividad - Woocommerce]()
+
+						- Instalación
+						- Configuración
+						- Ejemplo
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown="">
+						# [¿Qué hay más allá?]()
+					</section>
+					<section data-markdown="">
+						## [Search Engine Optimization (SEO)]() 
+
+						- Estrategia Palabras [Clave]() 
+						- Arquitectura de [Contenidos]() 
+						- Blogging 
+						- Etiquetado 
+					</section>
+					<section data-markdown="">
+						## [Neuromarketing]() 
+
+						- Colores 
+						- Posiciones 
+						- Textos 
+						- Etc 
+					</section>
+					<section data-markdown="">
+						## [Marketing Digital]() 
+
+						- Mediciones
+						- Seguimiento 
+						- Redes Sociales 
+						- Campañas 
+						- Mailing
+						- Etc
+					</section>
+					<section data-markdown="">
+						## [Sistema de Fidelización]() 
+						
+						- Sistema de Recompensa, por ej. Puntos por ...  
+						- Beneficios por:
+							* Antigüedad
+							* Frecuencia de compra 
+							* Monto de compras  
+							* Referencias 
+					</section>
+					<section data-markdown="">
+						## [Integración Otros Sistemas]()
+						
+						- Facturación 
+						- ERP 
+						- CRM
+					</section>
+				</section>
+
+				<section>
+					<h1><a>Gracias por su atención</a> <br /> ;)</h1>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
